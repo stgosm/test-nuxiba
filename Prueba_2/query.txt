@@ -1,2 +1,18 @@
+CREATE DATABASE pruebaNuxiba
+USE pruebaNuxiba
+CREATE TABLE logDial(
+idLogDial INT PRIMARY KEY,
+idLlamada VARCHAR(10),
+fechaDeLlamada DATETIME,
+tiempoDialogo SMALLINT,
+telefono VARCHAR(10),
+tipoDeLlamada VARCHAR(15)
+)
+
+CREATE TABLE costos(
+idCostos INT PRIMARY KEY,
+tipoDeLlamada VARCHAR(15),
+costo DECIMAL(10,4)
+
 SELECT * FROM logDial WHERE tipoDeLlamada = 'Cel LD'
 SELECT * FROM logDial WHERE tipoDeLlamada = 'Cel LD' AND fechaDeLlamada BETWEEN '01-02-2020' AND '28-02-2020'
