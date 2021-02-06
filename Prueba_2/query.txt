@@ -1,0 +1,2 @@
+SELECT * FROM logDial WHERE tipoDeLlamada = 'Cel LD'
+SELECT * FROM logDial WHERE tipoDeLlamada = 'Cel LD' AND fechaDeLlamada BETWEEN '01-02-2020' AND '28-02-2020'
