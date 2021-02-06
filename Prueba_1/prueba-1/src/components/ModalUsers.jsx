@@ -51,7 +51,7 @@ function Users({ id, name, username, email, phone, website }) {
                 { website }
             </Typography>
             <Button variant="outlined" color="secondary" href={"/posts?userId=" + id}>Posts</Button>
-            <Button variant="outlined" color="secondary">Todos</Button>
+            <Button variant="outlined" color="secondary" href={ "/todos?userId=" + id }>Todos</Button>
         </div>
   )
 }

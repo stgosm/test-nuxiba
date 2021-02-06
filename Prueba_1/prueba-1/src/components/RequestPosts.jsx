@@ -15,7 +15,7 @@ function RequestPosts(){
         async function getRequestPosts() {
         try {
             const dataPosts = await fetch(`https://jsonplaceholder.typicode.com/users/${ userId }/posts`);
-            const dataRequestPosts = await dataPosts.json()
+            const dataRequestPosts = await dataPosts.json();
 
             setRequestPosts(dataRequestPosts);
 
