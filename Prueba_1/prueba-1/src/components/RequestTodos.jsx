@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Todos from './Todos';
+import axios from "axios";
 import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
 import Grid from '@material-ui/core/Grid';
@@ -22,6 +23,15 @@ function RequestTodos(){
     const handleChange = (event) => {
         setChecked(event.target.checked);
         setCompleted(event.target.checked);
+        const data = {
+            userId: userId,
+            title: title,
+            completed: completed
+          };
+        axios
+      .post(`https://jsonplaceholder.typicode.com/users/${ userId }/todos`, data)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
     };
 
     const handleSubmit = event => {
